@@ -1,0 +1,412 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Top naviagtion section  */
+
+.top-navigation {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-navigation .left-nav {
+  margin-top: -1%;
+  margin-left: 2%;
+  display: flex;
+}
+
+.top-navigation .left-nav img {
+  width: 30%;
+}
+
+.top-navigation .left-nav span {
+  font-size: 30px;
+  font-family: "ADLaM Display", cursive;
+  margin-top: 3%;
+  margin-left: 10%;
+  color: rgb(222, 72, 58);
+}
+
+.top-navigation .right-nav {
+  margin-right: 0%;
+}
+
+.top-navigation .right-nav ul {
+  display: flex;
+  width: 20vw;
+
+  /* padding: 2%; */
+}
+
+.top-navigation .right-nav ul li {
+  list-style-type: none;
+}
+
+.top-navigation .right-nav ul #login {
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  padding: 1%;
+}
+
+.top-navigation .right-nav ul #login:hover {
+  background-color: rgba(128, 128, 128, 0.11);
+  border-radius: 5px;
+}
+
+.top-navigation .right-nav ul #signup {
+  margin-left: 15%;
+  cursor: pointer;
+  /* margin-top: 1%; */
+  background-color: rgb(222, 72, 58);
+  padding: 2% 2%;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "ADLaM Display", cursive;
+  color: white;
+  font-weight: 100;
+}
+
+.top-navigation .right-nav ul #signup:hover {
+  background-color: rgb(222, 72, 58, 0.9);
+}
+
+/* Intro Heading section  */
+
+.intro-heading {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.intro-heading h1 {
+  margin-left: 27%;
+  width: 45%;
+  font-size: 65px;
+  /* font-family: "Prompt", sans-serif; */
+  font-family: "Hammersmith One", sans-serif;
+}
+
+.intro-heading p {
+  margin-left: 29%;
+  width: 38%;
+  font-size: 20px;
+  margin-top: 1%;
+  font-family: "Titillium Web", sans-serif;
+  opacity: 0.5;
+}
+
+/* Home page middel start button  */
+
+.start-scroll-btn {
+  text-align: center;
+  width: 10%;
+  cursor: pointer;
+  background-color: rgb(222, 72, 58);
+  border-radius: 5px;
+  color: white;
+  margin-top: 5%;
+  margin-left: 44%;
+}
+
+.start-scroll-btn p {
+  font-family: "ADLaM Display", cursive;
+  font-size: 20px;
+  padding: 5%;
+}
+
+/* Partner section  */
+
+.partners {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.partners p {
+  font-size: 25px;
+  margin-top: 1%;
+  font-family: "Titillium Web", sans-serif;
+  opacity: 0.8;
+  margin-bottom: 2%;
+}
+
+/* Partner Images section  */
+
+.partners .images {
+  display: flex;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+  margin-left: 25%;
+}
+
+.partners .images img {
+  margin-right: 4%;
+  width: 10%;
+  opacity: 0.7;
+}
+.partners .images .microsoft {
+  width: 15%;
+  height: 15%;
+}
+
+.partners .images .amazon {
+  width: 10%;
+  height: 15%;
+}
+.partners .images .netflix {
+  width: 10%;
+  height: 15%;
+  margin-top: -2%;
+}
+
+.partners .images .disney {
+  width: 10%;
+  height: 15%;
+}
+
+.partners .images .adobe {
+  width: 5%;
+  height: 10%;
+}
+
+.descp-1 {
+  margin-top: 12%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.descp-1 .text {
+  width: 30%;
+}
+
+.descp-1 .text h4 {
+  color: red;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+
+.descp-1 .text h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 45px;
+  margin-bottom: 5%;
+}
+
+.descp-1 .text p {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+
+.descp-1 .side-img {
+  margin-left: 15%;
+  margin-top: 3%;
+}
+
+.descp-1 .side-img img {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  width: 90%;
+}
+
+.descp-2 {
+  margin-top: 12%;
+  margin-left: 12%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8%;
+  /* flex-wrap: wrap; */
+}
+
+.descp-2 .text {
+  width: 100%;
+}
+
+.descp-2 .text h4 {
+  color: red;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+
+.descp-2 .text h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 45px;
+  margin-bottom: 5%;
+}
+
+.descp-2 .text p {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+
+.descp-2 .side-video {
+  margin-top: 1%;
+  margin-left: 13%;
+}
+
+.descp-2 .side-video .random-video {
+  /* border: 2px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  width: 75%;
+}
+
+/* Explore section  */
+
+.explore {
+  margin-top: 15%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.explore h1 {
+  font-size: 45px;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 5%;
+}
+
+.explore .cards-conatiner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.explore .cards-conatiner .card {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2%;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  margin-right: 2%;
+}
+
+.explore .cards-conatiner .card:hover {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.explore .cards-conatiner .card img {
+  width: 50%;
+}
+
+.explore .cards-conatiner .card p {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+  margin-top: 10%;
+  font-size: 20px;
+}
+
+.rating {
+  background-color: rgba(255, 228, 196, 0.25);
+  /* border-top-color: white; */
+  /* margin-bottom: 5%; */
+  padding-bottom: 2%;
+}
+
+.rating h1 {
+  text-align: center;
+  padding-top: 5%;
+  margin-left: 25%;
+  width: 58%;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 40px;
+}
+
+.rating p {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-top: 2%;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.rating .download {
+  width: 15%;
+  margin-left: 45%;
+  /* margin-bottom: 2%; */
+}
+
+.rating .download:hover {
+  background-color: rgba(128, 128, 128, 0.11);
+  border-radius: 5px;
+  font-family: "ADLaM Display", cursive;
+}
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.11);
+  padding: 5%;
+  margin-top: 0;
+  background-color: rgba(255, 228, 196, 0.25);
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer ul li {
+  list-style-type: none;
+  font-size: 17px;
+  margin-top: 5%;
+  font-family: "Titillium Web", sans-serif;
+  opacity: 0.8;
+}
+
+.footer ul li:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer ul li img {
+  width: 20%;
+  margin-left: 5%;
+}
+
+/* Specail first column  */
+
+.footer ul .footer-logo {
+  display: flex;
+}
+
+.footer ul .footer-logo:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.footer ul .footer-logo img {
+  width: 15%;
+}
+
+.footer ul .footer-logo span {
+  margin-left: 5%;
+  margin-top: 4%;
+  font-size: 30px;
+}
+
+.footer ul .logo-define {
+  width: 40%;
+}
+
+/* First li of all  */
+
+.footer ul .first-li {
+  font-size: 20px;
+  font-weight: 550;
+  opacity: 1;
+  margin-bottom: 15%;
+}
+
+.footer ul .first-li:hover {
+  opacity: 1;
+  text-decoration: none;
+}
