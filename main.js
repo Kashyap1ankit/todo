@@ -17,8 +17,48 @@ const exploreH = document.querySelector(".explore-intro");
 const cardsconatianer = document.querySelector(".cards-conatiner");
 const ratingSection = document.querySelector(".rating");
 const footerSection = document.querySelector(".footer");
+const modal = document.querySelectorAll(".modal");
+const crossArray = document.querySelectorAll(".cross");
 
-//Function to load the spinner activity
+//Signup all buttons
+
+const signupModal = document.querySelector(".signup-modal");
+const signupUsername = document.getElementById("username");
+const signupEmail = document.getElementById("email");
+const signupPassword = document.getElementById("password");
+const signupButton = document.querySelector(".signup-btn");
+const signIn = document.querySelector(".sign-in");
+const forgetPassowrd = document.querySelectorAll(".forget-password");
+
+//Login all buttons
+
+const loginModal = document.querySelector(".login-modal");
+// const loginCross = document.querySelector(".login-cross");
+const loginUsername = document.getElementById("login-username");
+const loginEmail = document.getElementById("email");
+const loginPassword = document.getElementById("login-password");
+const loginButton = document.querySelector(".login-btn");
+const createAccount = document.querySelector(".create-account");
+const wrongDetails = document.querySelector(".wrong-details");
+
+//Forget password modal
+
+const forgetModal = document.querySelector(".forget-password-modal");
+const forgetUsername = document.getElementById("forget-username");
+const forgetPassword = document.getElementById("new-login-password");
+const forgetButton = document.querySelector(".set-password");
+const forgetWrong = document.querySelector(".forget-password-wrong");
+
+//Mobile Navigation selection
+
+const mobNav = document.querySelector(".mobile-nav");
+const threeLiner = document.querySelector(".three-liner");
+const mobCross = document.querySelector(".mob-cross");
+const mobLoginSignup = document.querySelector(".mob-login-signup");
+const mobLogin = document.querySelector(".mob-login");
+const mobSignup = document.querySelector(".mob-signup");
+
+//1.Function to load the spinner activity
 
 const blurIn = function () {
   nav.style.filter = "blur(10px)";
@@ -30,6 +70,7 @@ const blurIn = function () {
   exploreSection.style.filter = "blur(10px)";
   ratingSection.style.filter = "blur(10px)";
   footerSection.style.filter = "blur(10px)";
+  mobNav.style.filter = "blur(10px)";
 };
 
 const blurOut = function () {
@@ -42,6 +83,7 @@ const blurOut = function () {
   exploreSection.style.filter = "blur(0px)";
   ratingSection.style.filter = "blur(0px)";
   footerSection.style.filter = "blur(0px)";
+  mobNav.style.filter = "blur(0px)";
 };
 
 const loadSpinner = function () {
@@ -51,12 +93,30 @@ const loadSpinner = function () {
   setTimeout(function () {
     spinner.classList.add("hidden");
     blurOut();
+    // blurIn();
   }, 3000);
 };
 
-//When page loads then a load spinner works
+let checkUsername,
+  checkPassword,
+  checkEmail,
+  storeUsername,
+  storeEmail,
+  storePassword,
+  userData = [];
 
-window.addEventListener("load", loadSpinner);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//2.When page loads then a load spinner works
+
+window.addEventListener("load", function () {
+  loadSpinner();
+  getData();
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//3.All revealing feature
 
 //Revealing the partners logo when nav is not interescting the window
 
@@ -170,3 +230,141 @@ const optionav = {
 const observernav = new IntersectionObserver(callnav, optionav);
 
 observernav.observe(startScrollBtn);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//4.Signup-Login button features
+
+//get the signup modal feature
+
+const signupButtonsArray = [
+  navSignup,
+  startScrollBtn,
+  createAccount,
+  mobSignup,
+];
+
+signupButtonsArray.forEach(function (e) {
+  e.addEventListener("click", function (eve) {
+    loginModal.classList.add("hidden");
+    forgetModal.classList.add("hidden");
+    signupModal.classList.remove("hidden");
+    mobLoginSignup.classList.add("hidden");
+    blurIn();
+  });
+});
+
+//Login modal open feature
+
+const loginModalArray = [navLogin, signIn, mobLogin];
+
+loginModalArray.forEach(function (e) {
+  e.addEventListener("click", function (eve) {
+    signupModal.classList.add("hidden");
+    loginModal.classList.remove("hidden");
+    mobLoginSignup.classList.add("hidden");
+    blurIn();
+  });
+});
+
+//Cross button feature
+
+crossArray.forEach(function (e) {
+  e.addEventListener("click", function (eve) {
+    eve.target.closest(".modal").classList.add("hidden");
+    blurOut();
+  });
+});
+
+//Forget Modal feature
+
+forgetPassowrd.forEach(function (e) {
+  e.addEventListener("click", function (eve) {
+    forgetModal.classList.remove("hidden");
+    wrongDetails.classList.add("hidden");
+    loginModal.classList.add("hidden");
+    signupModal.classList.add("hidden");
+  });
+});
+
+//Storing the data when users gets signup
+
+const storeData = function () {
+  storeUsername = signupUsername.value;
+  storeEmail = signupEmail.value;
+  storePassword = signupPassword.value;
+
+  setData();
+};
+
+signupButton.addEventListener("click", storeData);
+
+//Checking details when user login
+
+const crossCheckData = function () {
+  getData();
+
+  if (
+    loginUsername.value === checkUsername &&
+    loginPassword.value === checkPassword
+  )
+    window.location = "http://192.168.16.129:5500/weather/index.html";
+  else wrongDetails.classList.remove("hidden");
+
+  loginUsername.value = "";
+  loginEmail.value = "";
+  loginPassword.value = "";
+};
+
+loginButton.addEventListener("click", crossCheckData);
+
+//Forget Password
+
+const forgetPassowrdChecker = function () {
+  if (forgetUsername.value === checkUsername) {
+    storeUsername = checkUsername;
+    storeEmail = checkEmail;
+    storePassword = forgetPassword.value;
+    setData();
+  } else {
+    forgetUsername.value = "";
+    forgetPassword.value = "";
+    forgetWrong.classList.remove("hidden");
+  }
+};
+
+forgetButton.addEventListener("click", forgetPassowrdChecker);
+
+const setData = function () {
+  userData = [storeUsername, storeEmail, storePassword];
+
+  localStorage.clear("Userdetails");
+
+  localStorage.setItem("Userdetails", JSON.stringify(userData));
+
+  signupModal.classList.add("hidden");
+  loginModal.classList.remove("hidden");
+  forgetModal.classList.add("hidden");
+
+  signupUsername.value = "";
+  signupEmail.value = "";
+  signupPassword.value = "";
+};
+
+const getData = function () {
+  const loginDetail = JSON.parse(localStorage.getItem("Userdetails"));
+
+  checkUsername = loginDetail[0];
+  checkEmail = loginDetail[1];
+  checkPassword = loginDetail[2];
+};
+
+//Mobile features
+
+threeLiner.addEventListener("click", function () {
+  mobLoginSignup.classList.remove("hidden");
+});
+
+mobCross.addEventListener("click", function () {
+  mobLoginSignup.classList.add("hidden");
+});

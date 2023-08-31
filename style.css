@@ -122,6 +122,93 @@
   }
 }
 
+/* mobile naviagtion  */
+
+.mobile-nav {
+  margin-top: 0%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 0;
+  height: 100px;
+}
+
+.mobile-nav .mob-left-nav {
+  margin-top: 1%;
+  margin-left: 2%;
+  display: flex;
+}
+
+.mobile-nav .mob-left-nav img {
+  height: 60%;
+}
+
+.mobile-nav .mob-left-nav span {
+  font-size: 30px;
+  font-family: "ADLaM Display", cursive;
+  margin-top: 3%;
+  margin-left: 10%;
+  color: rgb(222, 72, 58);
+}
+
+.mobile-nav .mob-right-nav img {
+  height: 60%;
+}
+
+.mob-hidden {
+  display: none;
+}
+
+.mob-login-signup {
+  background-color: cadetblue;
+  position: fixed;
+  top: 0;
+  left: 85%;
+  width: 30vw;
+  height: 100vh;
+  z-index: 100;
+  transition-duration: 5s;
+}
+
+.mob-login-signup .mob-login {
+  margin-left: 15%;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.mob-login-signup .mob-login:hover {
+  color: white;
+}
+
+.mob-login-signup .mob-signup {
+  margin-left: 15%;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.mob-login-signup .mob-signup:hover {
+  color: white;
+}
+
+.mob-login-signup .mob-cross {
+  cursor: pointer;
+  margin-left: 40%;
+  font-size: 40px;
+}
+
+.mob-login-signup .mob-cross:hover {
+  color: white;
+}
+
+/* desktop navigation  */
+
 .top-navigation {
   margin-top: 2%;
   margin-bottom: 5%;
@@ -141,6 +228,7 @@
   margin-top: 0%;
   padding: 2% 2% 0.5%;
 }
+
 .top-navigation .left-nav {
   margin-top: -1%;
   margin-left: 2%;
@@ -544,4 +632,672 @@
 .footer ul .first-li:hover {
   opacity: 1;
   text-decoration: none;
+}
+
+.footer .follow-section {
+  display: block;
+}
+
+.signup-modal {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  width: 25%;
+  z-index: 600;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+.signup-modal .cross {
+  position: absolute;
+  padding: 0%;
+  left: 92%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.signup-modal h1 {
+  font-family: "Kanit", sans-serif;
+  padding: 12% 6% 12% 12%;
+  font-size: 22px;
+}
+
+.signup-modal h1 span {
+  color: rgb(222, 72, 58);
+  font-size: 22px;
+}
+
+.signup-modal .mid-section {
+  display: block;
+}
+
+.signup-modal .mid-section label {
+  font-size: 17px;
+  display: block;
+  margin-left: 8%;
+  margin-bottom: 1%;
+  font-family: "Inconsolata", monospace;
+}
+
+.signup-modal .mid-section input {
+  display: block;
+  margin-left: 8%;
+  margin-bottom: 5%;
+  padding: 3% 2% 3% 2%;
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: #a5c5e53a;
+  border-radius: 5px;
+}
+
+.signup-modal .mid-section .signup-btn {
+  margin-left: 8%;
+  width: 85%;
+  padding: 2% 0;
+  border: none;
+  background-color: #6674cc;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.signup-modal .signup-footer-section {
+  margin: 10% 2%;
+  display: flex;
+  justify-content: space-around;
+  color: #6674cc;
+  cursor: pointer;
+}
+
+/* Login Modal section  */
+
+.login-modal {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  width: 25%;
+  z-index: 600;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+.login-modal .cross {
+  position: absolute;
+  padding: 0%;
+  left: 92%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.login-modal h1 {
+  font-family: "Kanit", sans-serif;
+  padding: 12% 6% 12% 12%;
+  font-size: 22px;
+}
+
+.login-modal .wrong-details {
+  margin-left: 10%;
+  margin-bottom: 10%;
+  background-color: rgba(255, 0, 0, 0.338);
+  width: 75%;
+  border-radius: 2px;
+}
+
+.login-modal .wrong-details p {
+  font-size: 17px;
+  padding: 2% 1% 2% 2%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.login-modal .mid-section {
+  display: block;
+}
+
+.login-modal .mid-section label {
+  font-size: 17px;
+  display: block;
+  margin-left: 8%;
+  margin-bottom: 1%;
+  font-family: "Inconsolata", monospace;
+}
+
+.login-modal .mid-section input {
+  display: block;
+  margin-left: 8%;
+  margin-bottom: 5%;
+  padding: 3% 2% 3% 2%;
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: #a5c5e53a;
+  border-radius: 5px;
+}
+
+.login-modal .mid-section .login-btn {
+  margin-left: 8%;
+  width: 85%;
+  padding: 2% 0;
+  border: none;
+  background-color: #6674cc;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.login-modal .login-footer-section {
+  margin: 10% 2%;
+  display: flex;
+  justify-content: space-around;
+  color: #6674cc;
+  cursor: pointer;
+}
+
+/* Forget Password section  */
+
+.forget-password-modal {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  width: 25%;
+  z-index: 600;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+.forget-password-modal .cross {
+  position: absolute;
+  padding: 0%;
+  left: 92%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.forget-password-modal h1 {
+  font-family: "Kanit", sans-serif;
+  padding: 12% 6% 12% 12%;
+  font-size: 22px;
+}
+
+.forget-password-modal .mid-section label {
+  font-size: 17px;
+  display: block;
+  margin-left: 8%;
+  margin-bottom: 1%;
+  font-family: "Inconsolata", monospace;
+}
+
+.forget-password-modal .mid-section input {
+  display: block;
+  margin-left: 8%;
+  margin-bottom: 5%;
+  padding: 3% 2% 3% 2%;
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: #a5c5e53a;
+  border-radius: 5px;
+}
+
+.forget-password-modal .set-password {
+  margin-left: 8%;
+  width: 85%;
+  padding: 2% 0;
+  border: none;
+  background-color: #6674cc;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+
+.forget-password-modal .forget-password-wrong {
+  margin-left: 10%;
+  margin-bottom: 10%;
+  background-color: rgba(255, 0, 0, 0.338);
+  width: 75%;
+  border-radius: 2px;
+}
+
+.forget-password-modal .forget-password-wrong p {
+  font-size: 17px;
+  padding: 2% 1% 2% 2%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* Media Queries */
+
+/* 1.Media query for phones  */
+
+@media only screen and (max-width: 25em) {
+  * {
+    width: inherit;
+  }
+
+  /* Top naviagtion section  */
+
+  .load {
+    top: 40%;
+  }
+
+  .load img {
+    width: 40%;
+  }
+
+  /* mobile naviagtion  */
+
+  .mobile-nav {
+    padding: 0;
+    height: 80px;
+    width: 100vw;
+  }
+
+  .mobile-nav .mob-left-nav {
+    margin-top: 0%;
+    margin-left: 2%;
+  }
+
+  .mobile-nav .mob-left-nav img {
+    margin-top: 5%;
+    width: 10%;
+  }
+
+  .mobile-nav .mob-left-nav span {
+    font-size: 20px;
+    margin-top: 6%;
+    margin-left: 2%;
+  }
+
+  .mobile-nav .mob-right-nav img {
+    width: 10%;
+    margin-top: -100%;
+    margin-left: 88%;
+  }
+
+  .mob-hidden {
+    display: inline-block;
+  }
+
+  .mob-login-signup {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100vw;
+  }
+
+  .mob-login-signup .mob-login {
+    margin-left: 40%;
+    margin-top: 35%;
+  }
+
+  .mob-login-signup .mob-signup {
+    margin-left: 40%;
+    margin-top: 5%;
+  }
+
+  .mob-login-signup .mob-cross {
+    margin-left: 90%;
+  }
+
+  .mob-login-signup .mob-cross:hover {
+    color: white;
+  }
+
+  /* desktop navigation  */
+
+  .top-navigation {
+    display: none;
+  }
+
+  .sticky {
+    display: none;
+  }
+
+  /* Intro Heading section  */
+
+  .intro-heading {
+    margin-top: 15%;
+  }
+
+  .intro-heading h1 {
+    margin-left: 0%;
+    width: 100%;
+    font-size: 37px;
+  }
+
+  .intro-heading p {
+    margin-left: 10%;
+    width: 80%;
+    font-size: 20px;
+    margin-top: 5%;
+  }
+
+  /* Home page middel start button  */
+
+  .start-scroll-btn {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 15%;
+  }
+
+  .start-scroll-btn p {
+    font-size: 15px;
+    padding: 3% 0%;
+    width: 100%;
+  }
+
+  /* Partner section  */
+
+  .partners {
+    margin-top: 15%;
+    text-align: center;
+  }
+
+  .partners p {
+    font-size: 25px;
+    margin-bottom: 10%;
+    padding: 2%;
+    letter-spacing: 1px;
+  }
+
+  /* Partner Images section  */
+
+  .partners .images {
+    margin-left: 5%;
+    transition-duration: 2s;
+    justify-content: space-around;
+  }
+
+  .partners .images img {
+    margin-right: 4%;
+    width: 50%;
+    opacity: 0.7;
+  }
+  .partners .images .microsoft {
+    width: 30%;
+  }
+
+  .partners .images .amazon {
+    width: 25%;
+    height: 15%;
+  }
+  .partners .images .netflix {
+    width: 25%;
+    height: 15%;
+    margin-top: -5%;
+  }
+
+  .partners .images .disney {
+    width: 20%;
+  }
+
+  .partners .images .adobe {
+    margin-top: -3%;
+    width: 15%;
+    height: 10%;
+  }
+
+  .descp-1 {
+    margin-top: 32%;
+    transition-duration: 3s;
+    margin-left: 12%;
+    display: block;
+    margin-bottom: 8%;
+  }
+
+  .descp-1 .text {
+    width: 100%;
+  }
+
+  .descp-1 .text h4 {
+    font-size: 18px;
+    margin-bottom: 5%;
+  }
+
+  .descp-1 .text h2 {
+    font-size: 35px;
+    margin-bottom: 5%;
+  }
+
+  .descp-1 .text p {
+    font-size: 18px;
+    margin-bottom: 5%;
+  }
+
+  .descp-1 .side-img {
+    margin-left: 3%;
+    margin-top: 10%;
+  }
+
+  .descp-1 .side-img img {
+    width: 80%;
+  }
+
+  .descp-2 {
+    transition-duration: 1s;
+    margin-top: 20%;
+    margin-left: 12%;
+    display: block;
+    margin-bottom: 8%;
+    /* flex-wrap: wrap; */
+  }
+
+  .descp-2 .text {
+    width: 100%;
+  }
+
+  .descp-2 .text h4 {
+    font-size: 18px;
+    margin-bottom: 5%;
+  }
+
+  .descp-2 .text h2 {
+    font-size: 35px;
+    margin-bottom: 5%;
+  }
+
+  .descp-2 .text p {
+    font-size: 18px;
+    margin-bottom: 5%;
+  }
+
+  .descp-2 .side-video {
+    margin-top: 10%;
+    margin-left: 3%;
+  }
+
+  .descp-2 .side-video .random-video {
+    width: 85%;
+  }
+
+  /* Explore section  */
+
+  .explore {
+    margin-top: 25%;
+    margin-bottom: 5%;
+  }
+
+  .explore h1 {
+    font-size: 25px;
+    margin-bottom: 15%;
+  }
+
+  .explore .cards-conatiner {
+    transition-duration: 5s;
+  }
+
+  .explore .cards-conatiner .card {
+    margin-right: 5%;
+    margin-left: 2%;
+    margin-bottom: 15%;
+  }
+
+  .explore .cards-conatiner .card:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .explore .cards-conatiner .card img {
+    width: 40%;
+  }
+
+  .explore .cards-conatiner .card p {
+    font-size: 18px;
+  }
+
+  .rating {
+    padding-bottom: 2%;
+    transition-duration: 1s;
+  }
+
+  .rating h1 {
+    margin-left: 5%;
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .rating p {
+    font-size: 15px;
+    margin-top: 10%;
+    margin-left: 20%;
+    width: 70%;
+  }
+
+  .rating .download {
+    width: 55%;
+    margin-left: 25%;
+  }
+
+  .footer {
+    padding: 5%;
+  }
+
+  .footer ul li {
+    font-size: 15px;
+    margin-top: 5%;
+  }
+
+  .footer ul li img {
+    width: 20%;
+    margin-left: 5%;
+  }
+
+  /* Specail first column  */
+
+  .footer ul .footer-logo {
+    display: none;
+  }
+
+  .footer ul .logo-define {
+    display: none;
+  }
+
+  /* First li of all  */
+
+  .footer ul .first-li {
+    font-size: 20px;
+    margin-right: 5%;
+  }
+
+  .footer .follow-section {
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex;
+  }
+
+  .footer .follow-section li img {
+    width: 50%;
+    margin-left: 23%;
+  }
+
+  .signup-modal {
+    position: fixed;
+    top: 15%;
+    left: 6%;
+    width: 90%;
+  }
+
+  .signup-modal .mid-section .signup-btn {
+    margin-left: 8%;
+    width: 80%;
+  }
+
+  .signup-modal .signup-footer-section {
+    margin: 10% 6%;
+  }
+
+  /* Login Modal section  */
+
+  .login-modal {
+    position: fixed;
+    top: 15%;
+    left: 6%;
+    width: 90%;
+  }
+
+  .login-modal .mid-section .login-btn {
+    margin-left: 8%;
+    width: 80%;
+  }
+
+  .login-modal .login-footer-section {
+    margin: 10% 6%;
+  }
+
+  .login-modal .wrong-details p {
+    font-size: 12px;
+    padding: 2% 1%;
+  }
+
+  /* Forget Password section  */
+
+  .forget-password-modal {
+    position: fixed;
+    top: 15%;
+    left: 6%;
+    width: 90%;
+  }
+
+  .forget-password-modal .set-password {
+    margin-left: 8%;
+    width: 70%;
+  }
+
+  .forget-password-modal .forget-password-wrong {
+    margin-left: 10%;
+    margin-bottom: 10%;
+    background-color: rgba(255, 0, 0, 0.338);
+    width: 75%;
+    border-radius: 2px;
+  }
+
+  .forget-password-modal .forget-password-wrong p {
+    font-size: 12px;
+    padding: 2% 1%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .reveal {
+    display: none;
+    transform: translateY(18rem);
+  }
+
+  .revealfromX {
+    display: none;
+    opacity: 0;
+  }
 }

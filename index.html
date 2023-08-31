@@ -32,14 +32,14 @@
       rel="stylesheet"
     />
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
       rel="stylesheet"
-    /> -->
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -68,11 +68,44 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Adding the script  -->
 
     <script defer src="main.js"></script>
   </head>
   <body>
+    <!-- Adding the mobile navigation  -->
+
+    <div class="mobile-nav mob-hidden">
+      <div class="mob-left-nav">
+        <img src="icon.png" alt="Slow internet connection" />
+        <span>DOIT</span>
+      </div>
+
+      <div class="mob-right-nav">
+        <img src="three-liner.png" alt="" class="three-liner" />
+      </div>
+    </div>
+
+    <div class="mob-login-signup hidden">
+      <span class="mob-cross">&times;</span>
+      <div class="mob-login">
+        <p>LOGIN</p>
+      </div>
+
+      <div class="mob-signup">
+        <p>SIGNUP</p>
+      </div>
+    </div>
+
     <!-- Load Spinner section  -->
 
     <div class="load hidden">
@@ -241,13 +274,115 @@
         <li>Twist</li>
       </ul>
 
-      <ul>
+      <ul class="follow-section">
         <li class="first-li">FOLLOW</li>
         <li><img src="twitter.png" alt="" /></li>
         <li><img src="linkdien.png" alt="" /></li>
         <li><img src="github.png" alt="" /></li>
         <li><img src="instagram.png" alt="" /></li>
       </ul>
+    </div>
+
+    <!-- Signup-modal  -->
+
+    <div class="signup-modal hidden modal">
+      <div class="cross">&times;</div>
+
+      <h1>SIGN UP TO <span class="doit"> DOIT </span> !</h1>
+
+      <div class="mid-section">
+        <label for="username">Enter Username</label>
+        <input type="text" name="user" id="username" placeholder="Username" />
+
+        <label for="email"> What’s Your email address? </label>
+        <input type="email" name="user" id="email" placeholder="Email id" />
+
+        <label for="password"> Choose a password</label>
+
+        <input
+          type="password"
+          name="user"
+          id="password"
+          placeholder="Password"
+        />
+
+        <button class="signup-btn">Signup Now</button>
+      </div>
+
+      <div class="signup-footer-section">
+        <p class="sign-in">Sign in with account</p>
+        <p class="forget-password">Forget your password</p>
+      </div>
+    </div>
+
+    <!-- Login moadal  -->
+
+    <div class="login-modal modal hidden">
+      <div class="cross">&times;</div>
+
+      <h1>LOGIN OR SIGN UP TO START LEARNING</h1>
+
+      <div class="wrong-details hidden">
+        <p>Please check username and password</p>
+      </div>
+      <div class="mid-section">
+        <label for="login-username">Enter Username</label>
+        <input
+          type="text"
+          name="user"
+          id="login-username"
+          placeholder="Username"
+        />
+
+        <label for="login-password"> Choose a password</label>
+
+        <input
+          type="password"
+          name="user"
+          id="login-password"
+          placeholder="Password"
+        />
+
+        <button class="login-btn">Get Login</button>
+      </div>
+
+      <div class="login-footer-section">
+        <p class="create-account">Create account</p>
+        <p class="forget-password">Forget your password</p>
+      </div>
+    </div>
+
+    <!-- Forget Password modal  -->
+
+    <div class="forget-password-modal modal hidden">
+      <div class="cross">&times;</div>
+
+      <h1>SET NEW PASSWORD</h1>
+
+      <div class="forget-password-wrong hidden">
+        <p>Please check username and password</p>
+      </div>
+
+      <div class="mid-section">
+        <label for="forget-username">Enter Username</label>
+        <input
+          type="text"
+          name="user"
+          id="forget-username"
+          placeholder="Username"
+        />
+
+        <label for="new-login-password"> Choose a password</label>
+
+        <input
+          type="password"
+          name="user"
+          id="new-login-password"
+          placeholder="Password"
+        />
+      </div>
+
+      <button class="set-password">Set New Password</button>
     </div>
   </body>
 </html>
